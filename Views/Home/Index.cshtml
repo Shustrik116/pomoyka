@@ -1,0 +1,26 @@
+﻿@model IEnumerable<test2.Models.Zavod>
+@{
+    ViewBag.Title = "Все вакансии";
+}
+<a asp-action="Create">Добавить вакансию</a>
+<table class="table">
+    <tr><td>ID</td><td>Название</td><td>Информация</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Id</td><td>@item.Name</td><td>@item.jobs</td></tr>
+    }
+</table>
+    
+    
+    @*@model IEnumerable<test2.Models.Zavod>
+@{
+    ViewBag.Title = "Все заводы";
+}
+<a asp-action="Create">Добавить завод</a>
+<table class="table">
+    <tr><td>ID</td><td>Название</td><td>Вакансии</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Id</td><td>@item.Name</td><td>@item.jobs</td></tr>
+    }
+</table>*@
